@@ -1,8 +1,8 @@
 .hero {
-    max-width: 910px;
     grid-template-columns: 2fr 3fr;
     grid-auto-rows: 400px;
     margin: 0 auto;
+    background-image: none;
 }
 
 .hero__card-container {
@@ -10,7 +10,23 @@
     padding-left: 40px;
 }
 
-.main__dishes .dishes-container { 
-    grid-template-columns: repeat(4, 1fr);
+.hero__image-container {
+    width: 100%;
+    min-width: 300px;
+    height: 100%;
+    min-height: 250px;
+    background-image: url('./images/hero-nobg.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.main__dishes .dishes-container {
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
     grid-auto-rows: minmax(200px, 1fr);
+}
+
+.main__menu .menu__images {
+    grid-template-columns: repeat(5, minmax(100px, 250px));
 }
